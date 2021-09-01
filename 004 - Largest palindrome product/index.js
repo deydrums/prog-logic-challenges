@@ -13,4 +13,26 @@ const isPalindrome = (n) =>{
     return n == rev;
 }
 
-console.log(isPalindrome(203));
+const xyz = () => {
+
+    let answer = 0;
+    let x = 0;
+    let y = 0;
+
+    for (let i = 100; i <= 999; i++) {
+        for (let j = i; j <= 999; j++) {
+            number = i * j;
+            if(isPalindrome(number) && number > answer){
+                answer = parseInt(number);
+                x = i,
+                y = j;
+            }
+        }
+    }
+
+    return(x*y);
+
+}
+
+console.log(xyz());
+;
